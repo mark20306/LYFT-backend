@@ -1,13 +1,13 @@
-from tire.tire import Tire
+from tire.tire import Tires
 
 
-class Carrigantires(Tire):
-    def __init__(self,  tire_wear_array):
-        self.tire_wear_array =  tire_wear_array
-        
+class CarriganTires(Tires):
+    def __init__(self, tire_wear):
+        self.tire_wear = tire_wear
+
     def needs_service(self):
-        for value in self.tire_wear_array:
-            if value >= 0.9:
+        for tire in self.tire_wear:
+            if tire >= 0.9:
                 return True
-            return False
+        return False
         
